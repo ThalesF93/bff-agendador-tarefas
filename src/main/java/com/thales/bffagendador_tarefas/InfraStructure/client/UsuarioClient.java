@@ -5,7 +5,6 @@ import com.thales.bffagendador_tarefas.Business.dto.EnderecoDTO;
 import com.thales.bffagendador_tarefas.Business.dto.TelefoneDTO;
 import com.thales.bffagendador_tarefas.Business.dto.UsuarioDTO;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @FeignClient(name = "usuario", url = "${usuario.url}")
