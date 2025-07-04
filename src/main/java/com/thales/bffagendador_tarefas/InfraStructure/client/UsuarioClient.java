@@ -1,6 +1,7 @@
 package com.thales.bffagendador_tarefas.InfraStructure.client;
 
 
+
 import com.thales.bffagendador_tarefas.Business.dto.EnderecoDTO;
 import com.thales.bffagendador_tarefas.Business.dto.TelefoneDTO;
 import com.thales.bffagendador_tarefas.Business.dto.UsuarioDTO;
@@ -37,8 +38,8 @@ public interface UsuarioClient {
 
     @PutMapping("/telefone")
     TelefoneDTO atualizaTelefone(@RequestBody TelefoneDTO dto,
-                                  @RequestParam("id") Long id,
-                                  @RequestHeader("Authorization") String token);
+                                 @RequestParam("id") Long id,
+                                 @RequestHeader("Authorization") String token);
 
     @PostMapping("/endereco")
     EnderecoDTO cadastraEndereco(@RequestBody EnderecoDTO dto,

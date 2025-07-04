@@ -1,6 +1,7 @@
 package com.thales.bffagendador_tarefas.Business;
 
 
+
 import com.thales.bffagendador_tarefas.Business.dto.EnderecoDTO;
 import com.thales.bffagendador_tarefas.Business.dto.TelefoneDTO;
 import com.thales.bffagendador_tarefas.Business.dto.UsuarioDTO;
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 public class UsuarioService {
+
     private final UsuarioClient client;
 
 
