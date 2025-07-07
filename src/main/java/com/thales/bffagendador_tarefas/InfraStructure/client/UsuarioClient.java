@@ -3,6 +3,7 @@ package com.thales.bffagendador_tarefas.InfraStructure.client;
 
 
 import com.thales.bffagendador_tarefas.Business.dto.EnderecoDTO;
+import com.thales.bffagendador_tarefas.Business.dto.LoginRequestDTO;
 import com.thales.bffagendador_tarefas.Business.dto.TelefoneDTO;
 import com.thales.bffagendador_tarefas.Business.dto.UsuarioDTO;
 import org.springframework.cloud.openfeign.FeignClient;
@@ -19,7 +20,7 @@ public interface UsuarioClient {
    UsuarioDTO salvaUsuario(@RequestBody UsuarioDTO usuarioDTO);
 
     @PostMapping("/login")
-     String login(@RequestBody UsuarioDTO usuarioDTO);
+     String login(@RequestBody LoginRequestDTO usuarioDTO);
 
 
     @DeleteMapping("/{email}")
