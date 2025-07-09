@@ -1,9 +1,9 @@
-FROM openjdk:21-jdk-alpine
+FROM openjdk:21-jdk-slim
 
 WORKDIR /app
 
-COPY build/libs/usuario-0.0.1-SNAPSHOT.jar /app/usuario.jar
+COPY build/libs/bff-agendador-tarefas-0.0.1-SNAPSHOT.jar /app/bff-agendador-tarefas.jar
 
-EXPOSE 8080
+EXPOSE 8083
 
-CMD ["java", "-jar", "/app/usuario.jar"]
+CMD ["java", "-jar", "/app/bff-agendador-tarefas.jar"]

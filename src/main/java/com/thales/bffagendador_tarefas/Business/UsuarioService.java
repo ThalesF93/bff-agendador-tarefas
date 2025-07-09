@@ -3,6 +3,7 @@ package com.thales.bffagendador_tarefas.Business;
 
 
 import com.thales.bffagendador_tarefas.Business.dto.EnderecoDTO;
+import com.thales.bffagendador_tarefas.Business.dto.LoginRequestDTO;
 import com.thales.bffagendador_tarefas.Business.dto.TelefoneDTO;
 import com.thales.bffagendador_tarefas.Business.dto.UsuarioDTO;
 import com.thales.bffagendador_tarefas.InfraStructure.client.UsuarioClient;
@@ -23,7 +24,10 @@ public class UsuarioService {
 
     public String loginUsuario(UsuarioDTO usuarioDTO) {
 
-        return client.login(usuarioDTO);
+        return client.login(LoginRequestDTO.builder()
+                .email(usuarioDTO.getEmail())
+                .senha(usuarioDTO.getSenha())
+                .build());
     }
 
     public UsuarioDTO buscarUsuarioPorEmail(String email, String token) {
